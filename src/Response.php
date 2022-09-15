@@ -130,7 +130,10 @@ class Response {
 
   private function setDefaultResponse()
   {
-    $this->success();
+    $this->data["status"] = "success";
+    $this->data["code"] = "200";
+    $this->data["message"] = "Successfully connected";
+    $this->responseCode = 200;
     return $this;
   }
   
